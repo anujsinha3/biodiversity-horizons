@@ -38,5 +38,4 @@ RUN Rscript -e "remotes::install_local('.', dependencies=TRUE)" # install packag
 
 COPY scripts ./scripts
 
-# Run the main script, which can take arguments to determine the workflow to run
-ENTRYPOINT ["Rscript", "scripts/main.R"]
+ENTRYPOINT ["R", "-e", "testthat::test_file('tests/testthat/test-sample.R')"]
