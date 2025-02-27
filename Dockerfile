@@ -39,4 +39,4 @@ RUN Rscript -e "remotes::install_local('.', dependencies=TRUE)" # install packag
 COPY scripts ./scripts
 COPY tests/testthat/test_sample.R ./tests/testthat
 
-ENTRYPOINT ["R", "-e", "testthat::test_file('./tests/testthat/test_sample.R')"]
+ENTRYPOINT ["R", "-e", "print(getwd()); testthat::test_file('./tests/testthat/test_sample.R')"]

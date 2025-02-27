@@ -2,12 +2,11 @@ library(testthat)
 library(here)
 library(biodiversityhorizons)
 
-source(here("utility", "format_conversion_util.R"))
-
 # Test for filter_range_data()
 test_that("filter_range_data() filters correctly based on realm", {
 
   # Mock data
+  source(here("utility", "format_conversion_util.R"))
   range_data <- data.frame(
     presence = c(1, 1, 2, 1, 1),
     origin = c(1, 2, 1, 3, 2),
@@ -33,6 +32,7 @@ test_that("filter_range_data() filters correctly based on realm", {
 # Test for clean_results()
 test_that("clean_results() cleans and combines correctly", {
 
+  source(here("utility", "format_conversion_util.R"))
   # Mock data
   res <- list(
     species1 = c(1, 2, 3),
