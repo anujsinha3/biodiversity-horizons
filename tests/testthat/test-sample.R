@@ -1,5 +1,5 @@
 library(testthat)
-library(biodiversity-horizons)
+library(biodiversityhorizons)
 
 test_that("basic_function works", {
   result <- basic_function()
