@@ -67,7 +67,7 @@ jobs:
         run:
           Rscript -e "library(here) ;print('Listing files in the root
           directory:') ;print(list.files(here())); print('Listing files in the
-          utility directory:') ;print(list.files(here('utility')));
+          utility directory:') ;print(list.files(here('utility')));"
 
       - uses: r-lib/actions/check-r-package@v2
         with:
