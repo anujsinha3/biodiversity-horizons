@@ -65,7 +65,8 @@ jobs:
 
       - name: Source files for test
         run:
-          Rscript -e "library(here) ;print('Listing files in the root
+          Rscript -e "library(here); source(here('utility',
+          'format_conversion_util.R')); print('Listing files in the root
           directory:') ;print(list.files(here())); print('Listing files in the
           utility directory:') ;print(list.files(here('utility')));"
 

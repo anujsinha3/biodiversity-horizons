@@ -2,6 +2,10 @@ library(testthat)
 library(here)
 library(biodiversityhorizons)
 
+print('Listing files in the root directory:')
+print(list.files(here()));
+print('Listing files in the utility directory:');
+print(list.files(here('utility')));
 source(here('utility', 'format_conversion_util.R'))
 
 # Test for filter_range_data()
