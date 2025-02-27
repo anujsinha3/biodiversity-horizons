@@ -62,8 +62,7 @@ prepare_range_data_from_shp_file <- function(input_file_path, grid, realm="abcd"
 }
 
 
-#' Helper Function: Filter Range Data Based on Realm
-#' @export
+# Helper Function: Filter Range Data Based on Realm
 filter_range_data <- function(range_data, realm) {
   log_info("Filtering Range Data Based on Realm...")
   range_filtered <- range_data %>%
@@ -92,8 +91,7 @@ intersect_ranges_with_grid <- function(range_filtered, grid) {
   return(intersected_data)
 }
 
-#' Helper Function: Clean and Combine Results
-#' @export
+# Helper Function: Clean and Combine Results
 clean_results <- function(res) {
 
   # Remove NULL results

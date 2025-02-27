@@ -1,12 +1,13 @@
 library(testthat)
-library(here)
-library(biodiversityhorizons)
+library(dplyr)
+library(purrr)
+library(sf)
+library(future)
+library(furrr)
 
-print('Listing files in the root directory:')
-print(list.files(here()));
-print('Listing files in the utility directory:');
-print(list.files(here('utility')));
-source(here('utility', 'format_conversion_util.R'))
+# Source the utility file with filter_range_data() definition
+# source("utility/format_conversion_util.R")
+source("utility/format_conversion_util.R")  # Path to the utility script
 
 # Test for filter_range_data()
 test_that("filter_range_data() filters correctly based on realm", {
