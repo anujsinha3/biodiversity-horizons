@@ -63,6 +63,9 @@ jobs:
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
 
+      - name: Source files for test
+        run: Rscript -e "source('utility/format_conversion_util.R')"
+
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
