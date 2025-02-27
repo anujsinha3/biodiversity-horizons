@@ -1,13 +1,5 @@
 library(testthat)
-library(dplyr)
-library(purrr)
-library(sf)
-library(future)
-library(furrr)
-
-# Source the utility file with filter_range_data() definition
-# source("utility/format_conversion_util.R")
-source("utility/format_conversion_util.R")  # Path to the utility script
+library(biodiversityhorizons)
 
 # Test for filter_range_data()
 test_that("filter_range_data() filters correctly based on realm", {
