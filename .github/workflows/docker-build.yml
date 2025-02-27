@@ -7,6 +7,9 @@ on:
     paths:
       - "Dockerfile"
       - "**/*.R"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-push:
@@ -38,7 +41,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: .devcontainer/Dockerfile.R
+          file: Dockerfile
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ env.PACKAGE }}:${{ env.VERSION }}
             ghcr.io/${{ github.repository_owner }}/${{ env.PACKAGE }}:latest
