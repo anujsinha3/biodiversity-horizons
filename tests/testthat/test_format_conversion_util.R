@@ -2,7 +2,8 @@ library(testthat)
 library(here)
 library(biodiversityhorizons)
 
-source("utility/format_conversion_util.R")
+print(getwd());
+source("../../utility/format_conversion_util.R")
 
 # Test for filter_range_data()
 test_that("filter_range_data() filters correctly based on realm", {
