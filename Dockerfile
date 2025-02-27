@@ -37,5 +37,6 @@ COPY utility ./utility
 RUN Rscript -e "remotes::install_local('.', dependencies=TRUE)" # install package code
 
 COPY scripts ./scripts
+COPY tests/testthat/test-sample.R ./tests/testthat
 
 ENTRYPOINT ["R", "-e", "testthat::test_file('tests/testthat/test-sample.R')"]
