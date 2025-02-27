@@ -2,9 +2,7 @@ library(testthat)
 library(here)
 library(biodiversityhorizons)
 
-# Sourcing the script from the utility folder using 'here'
-source(here("utility", "format_conversion_util.R"))
-
+# Sourcing the script from the utility folder when running locally
 
 # Test for filter_range_data()
 test_that("filter_range_data() filters correctly based on realm", {
