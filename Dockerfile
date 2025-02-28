@@ -1,4 +1,4 @@
-FROM anujsinha3/r-bio-div-base:latest
+FROM ghcr.io/anujsinha3/r-bio-div-base:latest
 
 WORKDIR /home/biodiversity-horizons
 
