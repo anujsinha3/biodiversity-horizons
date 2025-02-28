@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: Dockerfile
+          file: Dockerfile-base
           tags: |
             ghcr.io/${{ github.repository_owner }}/r-bio-div-base:1.1
             ghcr.io/${{ github.repository_owner }}/r-bio-div-base:latest
